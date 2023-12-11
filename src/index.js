@@ -9,9 +9,15 @@ mongoose
   )
   .then(() => {
     server.listen(port, () => {
-      console.log("🚀 Server listening to port: " + port);
+      console.log(" Server listening to port: " + port);
     });
   })
   .catch(() => {
     console.log("Errore nella connessione al DB");
   });
+
+
+
+
+
+  

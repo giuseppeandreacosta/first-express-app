@@ -1,25 +1,33 @@
-import mongoose,{ Schema } from "mongoose";
+import { Schema, model } from "mongoose"
 
+const authorSchema = new Schema(
+  {
+    name: {
+        type: String,
+        required: true
+    },
+    surname: {
+        type: String ,
+        required: true
 
-const UserSchema = new Schema ({
-  name : {
-    type : String,
+    },
+    email: {
+        type: String ,
+        required: true
+
+    }, 
+    birthday: {
+        type: String,
+        required: true
+
+    },
+    avatar: {
+        type: String,
+        required: true
+
+    }
   },
-  surname : {
-    type : String,
-  },
-  email : {
-    type : String,
-  },
-  birth : {
-    type : String,
-  },
-  avatar : {
-    type : String,
-  },
-});
+  { collection: "author" }
+)
 
-export const User = mongoose.model("users", UserSchema);
-
-
-
+export default model("Author", authorSchema)
